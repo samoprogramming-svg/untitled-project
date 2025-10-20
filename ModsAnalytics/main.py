@@ -193,7 +193,7 @@ class App():
         pygame.mixer.music.play()
 
     def chart2(self):
-        img = Image.open("uimages/averagedownloadspermodanalysis.png")
+        img = Image.open("images/averagedownloadspermodanalysis.png")
         img.thumbnail((1200, 1000)) 
         self.tk_img = ImageTk.PhotoImage(img)
         self.label1.config(image=self.tk_img)
@@ -205,7 +205,7 @@ class App():
         img.thumbnail((1200, 1000)) 
         self.tk_img = ImageTk.PhotoImage(img)
         self.label1.config(image=self.tk_img)
-        pygame.mixer.music.load("untitled-project-main/sounds/fart-with-reverb.mp3")
+        pygame.mixer.music.load("sounds/fart-with-reverb.mp3")
         pygame.mixer.music.play()
 
     def chart4(self):
@@ -319,10 +319,10 @@ class App():
         self.label1.configure(anchor="center")
         self.label1.place(x=1230, y=20, width=1100, height=760)
 
-        pygame.mixer.music.load("untitled-project-main/sounds/old-tractor.mp3")
+        pygame.mixer.music.load("sounds/old-tractor.mp3")
         pygame.mixer.music.play()
         time.sleep(12)
-        pygame.mixer.music.load("untitled-project-main/sounds/windows-xp-startup.mp3")
+        pygame.mixer.music.load("sounds/windows-xp-startup.mp3")
         pygame.mixer.music.play()
         
         self.main.mainloop()
