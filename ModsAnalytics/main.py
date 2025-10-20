@@ -1,3 +1,7 @@
+'''
+if you have troubles with paths then make a new enviroment, just make a new folder and put the extracted file that you can download on github into your folder, doesn't matter the name,
+open the folder as workspace in VSC and put the file in it, or just change the paths that you can find ( I am too lame to automate it or make it to exe ) but it should work if you do it the first way
+'''
 import os
 import tkinter as tk
 from PIL import Image, ImageTk
