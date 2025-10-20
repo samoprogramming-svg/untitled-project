@@ -30,7 +30,7 @@ class introduction():
         continue_button = tk.Button(master=self.introapp, text="Continue", font=("", 14), bg="#349429", fg="#000", command=self.startmainapp)
         continue_button.pack(pady=20)
 
-        pygame.mixer.music.load("untitled-project-main/sounds/echo3b.mp3")
+        pygame.mixer.music.load("sounds/echo3b.mp3")
         pygame.mixer.music.play()
         self.introapp.mainloop()
 
@@ -42,7 +42,7 @@ class introduction():
 class App():
 
     def __init__(self):
-        self.dataframe = pd.read_csv("untitled-project-main/DataFrames/finalfile.csv")
+        self.dataframe = pd.read_csv("DataFrames/finalfile.csv")
 
     def check_last_updated_type(self, file_path):
         df = pd.read_csv(file_path)
@@ -86,7 +86,7 @@ class App():
             if str(filter) == "median":
                 result = self.dataframe[what_to_filter2].median()
 
-            pygame.mixer.music.load("untitled-project-main/sounds/duck-toy-sound.mp3")
+            pygame.mixer.music.load("sounds/duck-toy-sound.mp3")
             pygame.mixer.music.play()
 
             self.label.config(text=result)
@@ -105,14 +105,14 @@ class App():
             if result_year:
                 self.label.config(text=result_year)
 
-                pygame.mixer.music.load("untitled-project-main/sounds/duck-toy-sound.mp3")
+                pygame.mixer.music.load("sounds/duck-toy-sound.mp3")
                 pygame.mixer.music.play()
             else:
-                pygame.mixer.music.load("untitled-project-main/sounds/errorsound.mp3")
+                pygame.mixer.music.load("sounds/errorsound.mp3")
                 pygame.mixer.music.play()
                 print("No mean year returned, ERROR 404")
         else:
-            pygame.mixer.music.load("untitled-project-main/sounds/errorsound.mp3")
+            pygame.mixer.music.load("sounds/errorsound.mp3")
             pygame.mixer.music.play()
             print("what_to_filter is wrong, ERROR 1")
 
@@ -156,10 +156,10 @@ class App():
                         except:
                             continue
 
-        df_local.to_csv("untitled-project-main/DataFrames/cleaned_downloads_only.csv", index=False)
+        df_local.to_csv("DataFrames/cleaned_downloads_only.csv", index=False)
         return df_local
 
-    def clean_dates(self, path = "untitled-project-main/DataFrames/cleaned_downloads_finals.csv"):
+    def clean_dates(self, path = "DataFrames/cleaned_downloads_finals.csv"):
         # code changed a lot of times depending on the data converting process (thats why I have like 6 csv files of the same dataframe)
 
         counter2 = 0
@@ -182,26 +182,26 @@ class App():
                 except:
                     continue
 
-        df_local2.to_csv("untitled-project-main/DataFrames/finalfile2.csv", index=False)
+        df_local2.to_csv("DataFrames/finalfile2.csv", index=False)
 
     def chart1(self):
-        img = Image.open("untitled-project-main/images/analysis_scr2.png")
+        img = Image.open("images/analysis_scr2.png")
         img.thumbnail((1200, 1000)) 
         self.tk_img = ImageTk.PhotoImage(img)
         self.label1.config(image=self.tk_img)
-        pygame.mixer.music.load("untitled-project-main/sounds/fart-with-reverb.mp3")
+        pygame.mixer.music.load("sounds/fart-with-reverb.mp3")
         pygame.mixer.music.play()
 
     def chart2(self):
-        img = Image.open("untitled-project-main/images/averagedownloadspermodanalysis.png")
+        img = Image.open("uimages/averagedownloadspermodanalysis.png")
         img.thumbnail((1200, 1000)) 
         self.tk_img = ImageTk.PhotoImage(img)
         self.label1.config(image=self.tk_img)
-        pygame.mixer.music.load("untitled-project-main/sounds/fart-with-reverb.mp3")
+        pygame.mixer.music.load("sounds/fart-with-reverb.mp3")
         pygame.mixer.music.play()
 
     def chart3(self):
-        img = Image.open("untitled-project-main/images/downloadsperkeyword.png")
+        img = Image.open("images/downloadsperkeyword.png")
         img.thumbnail((1200, 1000)) 
         self.tk_img = ImageTk.PhotoImage(img)
         self.label1.config(image=self.tk_img)
@@ -209,18 +209,18 @@ class App():
         pygame.mixer.music.play()
 
     def chart4(self):
-        img = Image.open("untitled-project-main/images/pieanalysis.png")
+        img = Image.open("images/pieanalysis.png")
         img.thumbnail((1200, 1000)) 
         self.tk_img = ImageTk.PhotoImage(img)
         self.label1.config(image=self.tk_img)
-        pygame.mixer.music.load("untitled-project-main/sounds/fart-with-reverb.mp3")
+        pygame.mixer.music.load("sounds/fart-with-reverb.mp3")
         pygame.mixer.music.play()
 
     def popup_image(self):
         top = tk.Toplevel()
         top.title("Image Popup")
 
-        img = Image.open("untitled-project-main/images/romanians.png")
+        img = Image.open("images/romanians.png")
         img = img.resize((1200, 800))
         self.popup_photo = ImageTk.PhotoImage(img) 
 
@@ -230,9 +230,9 @@ class App():
 
     def exitapp(self):
         self.popup_image()
-        pygame.mixer.music.load("untitled-project-main/sounds/roblox-bye.mp3")
+        pygame.mixer.music.load("sounds/roblox-bye.mp3")
         pygame.mixer.music.play()
-        pygame.mixer.music.queue("untitled-project-main/sounds/drum_bun.mp3")
+        pygame.mixer.music.queue("sounds/drum_bun.mp3")
         self.main.after(10000, self.main.destroy)
 
     def MakeUIloop(self):
@@ -312,7 +312,7 @@ class App():
         pandas_table.show()
 
         style.configure("label1.TLabel", background="#E4E2E2", foreground="#000", font=("", 40), anchor="center")
-        img = Image.open("untitled-project-main/images/defaultanalysis.png")
+        img = Image.open("images/defaultanalysis.png")
         img.thumbnail((1200, 1000)) 
         tk_img_default = ImageTk.PhotoImage(img)
         self.label1 = ttk.Label(master=self.main, image=tk_img_default, style="label1.TLabel")
