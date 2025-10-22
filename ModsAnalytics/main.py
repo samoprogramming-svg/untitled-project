@@ -297,8 +297,8 @@ class App():
         self.buttonimage4 = ttk.Button(master=self.main, text="chart 4", style="button.TButton", command=self.chart4)
         self.buttonimage4.place(x=920, y=800, width=250, height=80)
 
-        self.exitbutton = tk.Button(master=self.main, text="Exit", command=self.exitapp, bg = "red", fg = "white", font=("Arial", 20))
-        self.exitbutton.place(x=2250, y=800, width=80, height=80)
+        self.exitbutton = tk.Button(master=self.main, text="Let romanians steal the program", command=self.exitapp, bg = "red", fg = "white", font=("Arial", 20))
+        self.exitbutton.place(x=1850, y=800, width=400, height=80)
 
         style.configure("label.TLabel", background="#8e8dff", foreground="#000", font=("", 35), anchor="center")
         self.label = ttk.Label(master=frame, text="None", style="label.TLabel")
@@ -323,9 +323,6 @@ class App():
         self.label1.configure(anchor="center")
         self.label1.place(x=1230, y=20, width=1100, height=760)
 
-        pygame.mixer.music.load("sounds/old-tractor.mp3")
-        pygame.mixer.music.play()
-        time.sleep(12)
         pygame.mixer.music.load("sounds/windows-xp-startup.mp3")
         pygame.mixer.music.play()
         
